@@ -45,7 +45,7 @@ export default function BlogId({ blog }: BlogProps) {
         className={styles.post}
         dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
       />
-      <Link href='/'></Link>
+      <Link href='/'>←戻る</Link>
     </main>
   );
 }
