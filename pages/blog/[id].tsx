@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import { client } from "@/libs/client";
 import styles from "@/styles/Home.module.scss";
+import Link from "next/link";
 
 // SSG
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -44,6 +45,7 @@ export default function BlogId({ blog }: BlogProps) {
         className={styles.post}
         dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
       />
+      <Link href='/'></Link>
     </main>
   );
 }
